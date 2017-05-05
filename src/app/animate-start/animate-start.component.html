@@ -1,0 +1,9 @@
+<button (click)="animate()" [@removeMe]="btnState" >my button</button>
+<ul>
+  <li *ngFor="let item of items" 
+      [@myTrigger]="state"
+      (@myTrigger.start)="animStart($event)" 
+      (@myTrigger.done)="animDone($event)" >{{item}}</li>
+</ul>
+
+<p>{{admDetails}}</p>
